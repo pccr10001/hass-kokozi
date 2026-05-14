@@ -195,8 +195,18 @@ class KokoziHouseMediaPlayer(KokoziEntity, MediaPlayerEntity):
 
     async def async_media_play(self) -> None:
         """Resume playback."""
-        await self.coordinator.client.async_pause_house(
-            await self.coordinator.async_get_access_token(), self.house_id, False
+        access_token = await self.coordinator.async_get_access_token()
+        playlist_id = self._current_playlist_id
+        story_id = self._current_story_id
+
+        if not playlist_id or not story_id:
+            return
+
+        await self.coordinator.client.async_play_house_story(
+            access_token,
+            self.house_id,
+            playlist_id,
+            story_id=story_id,
         )
         await self.coordinator.async_refresh_after_command()
 
