@@ -1,0 +1,48 @@
+{
+  "config": {
+    "abort": {
+      "already_configured": "Kokozi 已經設定完成。"
+    },
+    "error": {
+      "cannot_connect": "無法連線到 Kokozi。",
+      "invalid_auth": "登入失敗，請確認貼上的 callback URL 後再試一次。",
+      "unknown": "[%key:common::config_flow::error::unknown%]"
+    },
+    "step": {
+      "user": {
+        "description": "選擇 Kokozi 登入方式。",
+        "menu_options": {
+          "email": "Email",
+          "google": "Google"
+        }
+      },
+      "email": {
+        "description": "正在開始 Kokozi Email 登入..."
+      },
+      "google": {
+        "description": "正在開始 Kokozi Google 登入..."
+      },
+      "callback": {
+        "description": "用瀏覽器開啟這個連結並登入：\n\n[{login_url}]({login_url})\n\n登入成功後，瀏覽器會導向 `kokozi://` URL，請把完整 URL 貼到下方欄位。",
+        "data": {
+          "callback_url": "完整 kokozi:// callback URL"
+        },
+        "data_description": {
+          "callback_url": "請貼上包含 deep_link_auth_code 的完整網址。"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "polling_interval": "輪詢間隔"
+        },
+        "data_description": {
+          "polling_interval": "Home Assistant 重新整理 Kokozi 雲端資料的頻率。"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "config": {
+    "abort": {
+      "already_configured": "Kokozi is already configured."
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to Kokozi.",
+      "invalid_auth": "Authentication failed. Check the callback URL and try again.",
+      "unknown": "[%key:common::config_flow::error::unknown%]"
+    },
+    "step": {
+      "user": {
+        "description": "Choose how you want to sign in to Kokozi.",
+        "menu_options": {
+          "email": "Email",
+          "google": "Google"
+        }
+      },
+      "email": {
+        "description": "Starting Kokozi email login..."
+      },
+      "google": {
+        "description": "Starting Kokozi Google login..."
+      },
+      "callback": {
+        "description": "Open this link in your browser and sign in:\n\n[{login_url}]({login_url})\n\nAfter the browser redirects to a `kokozi://` URL, paste the full URL below.",
+        "data": {
+          "callback_url": "Full kokozi:// callback URL"
+        },
+        "data_description": {
+          "callback_url": "Paste the complete URL that contains deep_link_auth_code."
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "polling_interval": "Polling interval"
+        },
+        "data_description": {
+          "polling_interval": "How often Home Assistant refreshes Kokozi cloud data."
+        }
+      }
+    }
+  }
+}
