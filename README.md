@@ -26,7 +26,6 @@ Kokozi House for HomeAssistant
         * Select the entry with `BottomTab`, then click `Header` page on the right side
         * Copy ALL TEXT in `Request URL`
         * Paste them to Setup in HomeAssistant dialog.
-
 ![hacs1](images/ch.png)
 
 
@@ -34,8 +33,7 @@ Kokozi House for HomeAssistant
         * Select entry with `POST` and `api.kokozi.co.kr`
         * In `Response Headers` on the right side, copy ALL TEXT in `location`
         * Paste them to Setup in HomeAssistant dialog.
-
-![hacs1](images/ff.png)
+![hacs2](images/ff.png)
 
     * The text will start with `kokozi:`
 * Click `Submit` in HomeAssistant
